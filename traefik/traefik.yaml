@@ -1,0 +1,10 @@
+providers:
+  file:
+    directory: /providers/
+
+api:
+  insecure: true
+  dashboard: true
+  debug: true
+accessLog:
+  filePath: access-log.log

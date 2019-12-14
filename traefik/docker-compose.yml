@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    image: traefik:v2.1
+    volumes:
+    - ./traefik.yaml:/etc/traefik/traefik.yaml
+    - ./foo-traefik.yaml:/providers/foo.yaml
+    - ./bar-traefik.yaml:/providers/bar.yaml
+    ports:
+      - "80:80"
+      - "8080:8080"
