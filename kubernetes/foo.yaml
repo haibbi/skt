@@ -20,6 +20,8 @@ spec:
           image: docker.pkg.github.com/haibbi/skt/foo
           ports:
             - containerPort: 8080
+      imagePullSecrets:
+        - name: regcred
 ---
 kind: Service
 apiVersion: v1
