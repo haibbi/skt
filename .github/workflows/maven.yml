@@ -14,6 +14,6 @@ jobs:
       with:
         java-version: 13
     - name: Build with Maven
-      run: mvn clean package -Djib.to.auth.username=haibbi -Djib.to.auth.password=$JIB_TOKEN
+      run: mvn clean package -Djib.to.auth.username=haibbi -Djib.to.auth.password=$JIB_TOKEN -Djib.to.image.tags=latest
       env:
         JIB_TOKEN: ${{secrets.JIB_TOKEN}}
